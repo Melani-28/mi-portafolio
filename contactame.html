@@ -18,7 +18,7 @@
 </head>
 <body>
   <header>
-    <H2>PORTAFOLIO</H2>
+    <h1>PORTAFOLIO</h1>
     <nav class="menu">
       <a href="index.html">Inicio</a>
       <a href="sobremi.html">Sobre mí</a>
@@ -28,12 +28,31 @@
     </nav>
   </header>
 
-    <main>
-        <section class="about">
-            <h1>Sobre mí</h1>
-            <p>Soy diseñadora gráfica e ilustradora con un enfoque editorial...</p>
-        </section>
-    </main>
+  <main class="formulario">
+    <section id="contacto" class="contacto">
+      <h2 class="contacto__title">Contáctame</h2>
+      <form class="contenido">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="4" required></textarea>
+
+        <div class="contenido__botones">
+            <button type="submit"><i class="fas fa-paper-plane"></i>Enviar</button>
+            <button type="reset"><i class="fas fa-eraser"></i>Limpiar</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
   <footer>
         <div class="redes-sociales">
           <a href="mail:melani.rousse11282001@gmail.com" aria-label="Correo electrónico"><i class="fas fa-envelope"></i></a>
