@@ -1,0 +1,281 @@
+/* galeria*/
+.galeria-contenido {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--color-secundario);
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  perspective: 1000px;
+  position: relative;
+}
+
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: relative;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-front img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-front {
+  position: relative;
+  z-index: 2;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-principal);
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 8px;
+  font-family: var(--fuente-principal);
+  box-sizing: border-box;
+}
+
+
+/*Sobre mi*/
+
+.yo {
+  background-color: var(--color-fondo);
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #2e2e2e;
+}
+
+.yo-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.yo-texto {
+  max-width: 650px;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: var(--tamanio-texto);
+}
+
+.yo-texto h2 {
+  font-size: var(--tamanio-subtitulo);
+  margin-bottom: 1rem;
+  color: var(--color-oscuro);
+}
+
+.yo-texto strong {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.yo-texto em {
+  color: var(--color-principal);
+  font-style: italic;
+}
+
+.yo-imagen img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  
+}
+
+
+@media (min-width: 768px) {
+  .yo-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .yo-texto {
+    flex: 2;
+  }
+
+  .yo-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.animacion {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.animacion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*inicio*/
+
+.hero {
+  background-image: url('../img/aprender-programas-adobe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 1;
+}
+
+.espacio-basio {
+  height: 100vh;
+  background-image: url('../img/aprender-programas-adobe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+
+/*Proyectos*/
+
+.filtro-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  background-color: var(--color-principal);
+}
+
+.filtro-btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff; 
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filtro-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-terciario); 
+  transition: width 0.3s ease;
+}
+
+.filtro-btn:hover::after,
+.filtro-btn.active::after {
+  width: 100%;
+}
+
+.filtro-btn:hover {
+  color: var(--color-terciario);
+}
+
+.proyectos-galeria {
+  column-count: 3;           
+  column-gap: 1.5rem;        
+  padding: 2rem 1rem;
+  background-color: var(--color-terciario);
+}
+
+.proyecto-item {
+  break-inside: avoid;       
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.proyecto-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
