@@ -3,7 +3,7 @@
   column-count: 3;
   column-gap: 1.5rem;
   padding: 2rem;
-  background-color: var(--color-secundario);
+  background-color: var(--color-fondo);
 }
 
 .card {
@@ -131,6 +131,9 @@
   
 }
 
+.yo-contenido p{
+  color: var(--color-texto-contenido);
+}
 
 @media (min-width: 768px) {
   .yo-contenido {
@@ -226,8 +229,9 @@
   justify-content: center;
   gap: 2rem;
   margin: 1rem 0;
+  padding: 0.5rem;
   padding-bottom: 1rem;
-  background-color: var(--color-principal);
+  background-color: var(--color-secundario);
 }
 
 .filtro-btn {

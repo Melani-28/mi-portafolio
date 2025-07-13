@@ -1,13 +1,3 @@
-// Ejemplo: Scroll suave al hacer clic
-document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-  enlace.addEventListener('click', e => {
-    e.preventDefault();
-    const destino = document.querySelector(enlace.getAttribute('href'));
-    if (destino) {
-      destino.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
 
 //animacion al bajar
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,4 +47,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//Modo oscuro/claro
+
+document.addEventListener("DOMContentLoaded", () => {
+  const botonTema = document.getElementById('toggle-tema');
+  const body = document.body;
+
+  if (localStorage.getItem('modo') === 'oscuro') {
+    body.classList.add('modo-oscuro');
+    botonTema.textContent = '🌙'; // ir a modo oscuro
+  } else {
+    botonTema.textContent = '💡'; // ir a modo claro
+  }
+
+  botonTema.addEventListener('click', () => {
+    body.classList.toggle('modo-oscuro');
+
+    const modoClaroActivo = body.classList.contains('modo-oscuro');
+
+    botonTema.textContent = modoClaroActivo ? '🌙' : '💡';
+    localStorage.setItem('modo', modoClaroActivo ? 'claro' : 'claro');
+  });
+});
+
 
