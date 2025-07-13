@@ -61,11 +61,17 @@ h2 {
   transform: scaleX(1);
 }
 
-
+/*Contenido de inicio*/
 .hero {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 8rem 1rem;
+  text-align: center;
 }
+
 
 .btn {
   display: inline-block;
@@ -77,13 +83,20 @@ h2 {
   border-radius: 4px;
 }
 
+.btn:hover {
+  background: var(--color-terciario);
+  color: #1E1E2F;
+  transition: all 0.3s ease;
+}
+
+
 /* Footer*/
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-oscuro); /* o #1e1e1e si no tienes variables */
+  background-color: var(--color-oscuro); 
   color: #f2f2f2;
   padding: 1rem;
   text-align: center;
@@ -115,6 +128,9 @@ footer {
   color: #ccc;
 }
 
+main {
+  padding-bottom: 120px; 
+}
 
 /* Versión para pantallas grandes */
 @media (min-width: 768px) {
@@ -134,6 +150,5 @@ footer {
   }
 }
 
-main {
-  padding-bottom: 120px; /* o el alto de tu footer */
-}
+
+
