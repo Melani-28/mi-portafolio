@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melani | Contacto</title>
+  <title>Melani Salvador | Contacto</title>
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/main.js"></script>
+  <script src="./js/ejercicios.js"></script>
+  
+  
 
   <!--iconos-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -30,31 +32,35 @@
       <a href="js.html"><i class="fa-solid fa-code"></i> Js</a>
     </nav>
   </header>
+  
+    <main>
+        <section class="zona-pruebas">
+        <h2>🧪 Zona de Pruebas JavaScript</h2>
 
-  <main class="formulario">
-    <section id="contacto" class="contacto">
-      <h2 class="contacto__title">Contáctame</h2>
-      <form class="contenido">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required />
-
-        <label for="Apellido">Apellido:</label>
-        <input type="text" id="Apellido" required />
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" required />
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" rows="4" required></textarea>
-
-        <div class="contenido__botones">
-            <button type="submit"><i class="fas fa-paper-plane"></i>Enviar</button>
-            <button type="reset"><i class="fas fa-eraser"></i>Limpiar</button>
+        <!-- Contenedores -->
+        <div id="contenedor1" class="contenedor-principal">
+            <div class="caja">Caja 1</div>
+            <div class="caja">Caja 2</div>
         </div>
 
-      </form>
-    </section>
-  </main>
+        <div id="contenedor2" class="contenedor-principal">
+            <div class="caja">Caja A</div>
+            <div class="caja">Caja B</div>
+        </div>
+
+        <!-- Botones de ejercicios -->
+        <div class="botones">
+            <button onclick="agregarCaja()">01 ➕ Agregar Caja</button>
+            <button onclick="eliminarCaja()">02 🗑️ Eliminar Caja</button>
+            <button onclick="agregarClase()">03 🎨 Agregar Clase</button>
+            <button onclick="eliminarClase()">04 ❌ Quitar Clase</button>
+            <button onclick="toggleClase()">05 🔁 Alternar Clase</button>
+            <button onclick="comprobarClase()">06 🧐 Comprobar Clase</button>
+            <button onclick="incrementarFuente()">07 ➕ Aumentar Fuente</button>
+            <button onclick="disminuirFuente()">08 ➖ Disminuir Fuente</button>
+        </div>
+        </section>
+    </main>
 
   <footer>
         <div class="redes-sociales">
