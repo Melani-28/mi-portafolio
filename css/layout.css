@@ -168,7 +168,7 @@
 /*inicio*/
 
 .hero {
-  background-image: url('../img/aprender-programas-adobe.jpg');
+  background-image: url('../img/fondo\ inicio.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
@@ -201,7 +201,7 @@
 
 .espacio-vacio {
   height: 100vh;
-  background-image: url('../img/aprender-programas-adobe.jpg');
+  background-image: url('../img/fondo\ inicio.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

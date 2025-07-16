@@ -277,7 +277,17 @@ main {
   form.contenido {
     padding: 0 1rem;
   }
+  .galeria-contenido,
+  .proyectos-galeria {
+    column-count: 1;
+    column-gap: .75rem;
+  }
+  img, iframe, video { max-width: 100%; height: auto; }
+   h1, h2, p, a, li, span { overflow-wrap: anywhere; }
+   body { overflow-x: hidden; }
 }
+
+
 
 /* Para teléfonos */
 @media (max-width: 480px) {
