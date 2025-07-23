@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -35,7 +36,12 @@
   <main class="formulario">
     <section id="contacto" class="contacto">
       <h2 class="contacto__title">Contáctame</h2>
-      <form class="contenido">
+      <form class="contenido" action="https://formsubmit.co/melani.rousse11282001@gmail.com" method="POST">
+
+        <!-- Evita spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> 
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" required />
 
@@ -54,6 +60,12 @@
         </div>
 
       </form>
+
+      <div id="mensaje-confirmacion" class="oculto" style="text-align: center; margin-top: 1.5rem; color: var(--color-principal); font-size: 1.2rem;">
+        ¡Gracias por escribirme! Pronto me pondré en contacto contigo. 💌
+      </div>
+
+
     </section>
   </main>
 

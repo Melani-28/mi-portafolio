@@ -35,12 +35,17 @@
     <section class="proyectos">
 
       <!-- Filtros -->
-      <div class="filtro-categorias">
-        <button class="filtro-btn active" data-filtro="todos">Todos</button>
-        <button class="filtro-btn" data-filtro="branding">Branding</button>
-        <button class="filtro-btn" data-filtro="logos">Logos</button>
-        <button class="filtro-btn" data-filtro="packaging">Packaging</button>
-        <button class="filtro-btn" data-filtro="ilustraciones">Ilustraciones</button>
+      <div class="filtro-hamburguesa">
+        <input type="checkbox" id="toggle-filtros" hidden>
+        <label for="toggle-filtros" class="btn-filtro-toggle"><i class="fa-solid fa-filter"></i> Filtros</label>
+
+        <div class="filtro-categorias">
+          <button class="filtro-btn active" data-filtro="todos">Todos</button>
+          <button class="filtro-btn" data-filtro="branding">Branding</button>
+          <button class="filtro-btn" data-filtro="logos">Logos</button>
+          <button class="filtro-btn" data-filtro="packaging">Packaging</button>
+          <button class="filtro-btn" data-filtro="ilustraciones">Ilustraciones</button>
+        </div>
       </div>
 
       <!-- Branding -->
