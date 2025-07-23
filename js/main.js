@@ -54,20 +54,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const botonTema = document.getElementById('toggle-tema');
   const body = document.body;
 
-  if (localStorage.getItem('modo') === 'oscuro') {
+  // Aplicar el tema guardado
+  const modoGuardado = localStorage.getItem('modo');
+  if (modoGuardado === 'oscuro') {
     body.classList.add('modo-oscuro');
-    botonTema.textContent = '🌙'; // ir a modo oscuro
+    botonTema.textContent = '🌙';
   } else {
-    botonTema.textContent = '💡'; // ir a modo claro
+    body.classList.remove('modo-oscuro');
+    botonTema.textContent = '💡';
   }
 
+  // Cambiar de modo al hacer clic
   botonTema.addEventListener('click', () => {
-    body.classList.toggle('modo-oscuro');
+    const modoOscuroActivo = body.classList.toggle('modo-oscuro');
+    botonTema.textContent = modoOscuroActivo ? '🌙' : '💡';
 
-    const modoClaroActivo = body.classList.contains('modo-oscuro');
-
-    botonTema.textContent = modoClaroActivo ? '🌙' : '💡';
-    localStorage.setItem('modo', modoClaroActivo ? 'claro' : 'claro');
+    // Guardar el modo actual
+    localStorage.setItem('modo', modoOscuroActivo ? 'oscuro' : 'claro');
   });
 });
 

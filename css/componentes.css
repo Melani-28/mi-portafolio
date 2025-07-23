@@ -154,80 +154,7 @@ main {
   transform: scale(1.2);
 }
 
-/*Para los js solicitados*/
 
-.zona-pruebas {
-  padding: 4rem 2rem;
-  background-color: var(--color-fondo);
-  color: var(--color-texto-contenido);
-  font-family: var(--fuente-principal);
-  text-align: center;
-}
-
-.zona-pruebas h2 {
-  font-size: var(--tamanio-subtitulo);
-  margin-bottom: 2rem;
-  color: var(--color-principal);
-}
-
-.contenedor-principal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.caja {
-  width: 120px;
-  height: 100px;
-  background-color: var(--color-secundario);
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-/* Estilo cuando se activa una clase */
-.caja.activa {
-  background-color: #1E1E2F;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* Botones */
-.botones {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.botones button {
-  padding: 0.7rem 1.3rem;
-  background-color: var(--color-terciario);
-  color: #1E1E2F;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.botones button:hover {
-  background-color: var(--color-principal);
-  color: #fff;
-  transform: translateY(-2px);
-}
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
@@ -308,6 +235,40 @@ main {
   .filtro-btn {
     white-space: nowrap;
     font-size: .9rem;
+  }
+  
+  .proyectos-galeria,
+  .galeria-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .proyecto-item,
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .filtro-categorias {
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 1rem;
+    scrollbar-width: none;
+  }
+
+  .filtro-categorias::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filtro-btn {
+    flex: 0 0 auto;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid white;
   }
 }
 
