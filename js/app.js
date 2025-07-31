@@ -1,5 +1,5 @@
 // pagina para hacer funcinal el formulario
-document.getElementById("formulario-contacto").addEventListener("submit", function (e) {
+document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const formData = new FormData(this);

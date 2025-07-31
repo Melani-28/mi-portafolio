@@ -1,40 +1,55 @@
-from flask import Flask, request, jsonify, render_template
-import smtplib
+from flask import Flask, request, jsonify
 from email.message import EmailMessage
+import smtplib
+import os
+from dotenv import load_dotenv
+
+# Cargar variables del archivo .env
+load_dotenv()
 
 app = Flask(__name__, static_folder='.', static_url_path='')
+app.secret_key = os.getenv("SECRET_KEY")
 
 @app.route('/')
-def index():
-    return app.send_static_file('contactame.html')  # Tu archivo HTML principal
+def home():
+    # Esto carga tu HTML principal, por ejemplo contactame.html
+    return app.send_static_file('contactame.html')
 
 @app.route('/enviar', methods=['POST'])
 def enviar():
+    # Obtener datos del formulario
     nombre = request.form.get('nombre')
     correo = request.form.get('correo')
     mensaje = request.form.get('mensaje')
 
-    if not nombre or not correo or not mensaje:
-        return jsonify({'status': 'error', 'message': 'Campos incompletos'}), 400
+    # Leer variables del archivo .env
+    remitente = os.getenv("EMAIL_USER")
+    contraseña = os.getenv("EMAIL_PASSWORD")
+    receptor = remitente  # Puedes cambiarlo si quieres recibir en otro correo
 
-    # Configura tu correo (con contraseña de aplicación)
-    remitente = 'rousse11282001@gmail.com'
-    receptor = 'rousse11282001@gmail.com'
-    contraseña = 'CONTRASEÑA-DE-APLICACION'
-
+    # Crear el mensaje de correo
     email = EmailMessage()
     email['From'] = remitente
     email['To'] = receptor
-    email['Subject'] = 'Mensaje desde tu portafolio'
-    email.set_content(f'Nombre: {nombre}\nCorreo: {correo}\nMensaje:\n{mensaje}')
+    email['Subject'] = '📩 Nuevo mensaje desde tu portafolio web'
+    email.set_content(f'''
+    Has recibido un nuevo mensaje:
+
+    🧑 Nombre: {nombre}
+    📧 Correo: {correo}
+
+    💬 Mensaje:
+    {mensaje}
+    ''')
 
     try:
+        # Enviar el correo usando Gmail SMTP
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(remitente, contraseña)
             smtp.send_message(email)
         return jsonify({'status': 'ok'})
     except Exception as e:
-        print('Error al enviar:', e)
+        print(f"Error al enviar: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
