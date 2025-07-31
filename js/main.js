@@ -74,38 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// para verificacion de envio de formulario
 
-document.addEventListener("DOMContentLoaded", () => {
-  const formulario = document.getElementById("formulario-contacto");
-  const mensaje = document.getElementById("mensaje-confirmacion");
 
-  if (formulario) {
-    formulario.addEventListener("submit", function(e) {
-      e.preventDefault();
 
-      const datos = new FormData(formulario);
-
-      fetch("https://formsubmit.co/ajax/rousse11282001@gmail.com", {
-        method: "POST",
-        body: datos,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          formulario.reset();
-          mensaje.classList.remove("oculto");
-          mensaje.classList.add("visible");
-        } else {
-          alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
-        }
-      }).catch(error => {
-        alert("Error de conexión.");
-      });
-    });
-  }
-});
 
 
 

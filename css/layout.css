@@ -449,7 +449,7 @@ form textarea:focus {
   color: #fff;
 }
 
-/* animacion para verificacion de envio de formulario */
+/* verificacion de envio de formulario */
 #mensaje-exito {
   text-align: center;
   margin-top: 2rem;
@@ -467,6 +467,7 @@ form textarea:focus {
 .visible {
   display: block;
 }
+
 
 /* mis webs*/
 
