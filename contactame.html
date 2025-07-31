@@ -39,25 +39,28 @@
 
     <section id="contacto" class="contacto">
       <h2 class="contacto__title">Contáctame</h2>
-      <form id="formulario-contacto" action="/enviar" method="POST">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-        <label>Correo electrónico:</label>
-        <input type="email" name="correo" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
 
-        <label>Mensaje:</label>
-        <textarea name="mensaje" required></textarea>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
 
-        <button type="submit">Enviar</button>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <div class="contenido__botones">
+          <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+          <button type="reset"><i class="fas fa-eraser"></i> Limpiar</button>
+        </div>
       </form>
 
       <div id="mensaje-confirmacion" class="oculto">
         ¡Gracias por escribirme! 💌
       </div>
-
-      </form>
-
     </section>
   </main>
 

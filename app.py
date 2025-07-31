@@ -47,7 +47,7 @@ def enviar():
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(remitente, contraseña)
             smtp.send_message(email)
-        return jsonify({'status': 'ok'})
+        return jsonify({'status': 'ok'}), 200
     except Exception as e:
         print(f"Error al enviar: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
