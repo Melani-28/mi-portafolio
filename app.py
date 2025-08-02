@@ -1,37 +1,28 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from email.message import EmailMessage
 import smtplib
 import os
 from dotenv import load_dotenv
 
-# Cargar variables del archivo .env
 load_dotenv()
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
 
 @app.route('/')
 def home():
-    # Esto carga tu HTML principal, por ejemplo contactame.html
-    return app.send_static_file('contactame.html')
+    return render_template('contactame.html')
 
 @app.route('/enviar', methods=['POST'])
 def enviar():
-    # Obtener datos del formulario
     nombre = request.form.get('nombre')
-    apellido = request.form.get('apellido')
     correo = request.form.get('correo')
     mensaje = request.form.get('mensaje')
 
-    # Leer variables del archivo .env
     remitente = os.getenv("EMAIL_USER")
     contraseña = os.getenv("EMAIL_PASSWORD")
-    print("Usuario:", remitente)
-    print("Contraseña:", contraseña)
+    receptor = remitente
 
-    receptor = remitente  # Puedes cambiarlo si quieres recibir en otro correo
-
-    # Crear el mensaje de correo
     email = EmailMessage()
     email['From'] = remitente
     email['To'] = receptor
