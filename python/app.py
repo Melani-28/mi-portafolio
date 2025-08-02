@@ -19,6 +19,7 @@ def home():
 def enviar():
     # Obtener datos del formulario
     nombre = request.form.get('nombre')
+    apellido = request.form.get('apellido')
     correo = request.form.get('correo')
     mensaje = request.form.get('mensaje')
 
@@ -43,7 +44,6 @@ def enviar():
     ''')
 
     try:
-        # Enviar el correo usando Gmail SMTP
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(remitente, contraseña)
             smtp.send_message(email)

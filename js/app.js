@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
       method: "POST",
       body: datos
     })
-    .then(res => res.json())
+    .then(res => res.ok ? res.json() : Promise.reject(res))
     .then(data => {
       if (data.status === 'ok') {
         formulario.reset();
         mensaje.classList.remove("oculto");
       } else {
-        alert("Error al enviar: " + (data.message || "Intenta nuevamente."));
+        alert("Error al enviar: " + data.message);
       }
     })
     .catch(() => {
