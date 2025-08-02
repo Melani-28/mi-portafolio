@@ -26,6 +26,9 @@ def enviar():
     # Leer variables del archivo .env
     remitente = os.getenv("EMAIL_USER")
     contraseña = os.getenv("EMAIL_PASSWORD")
+    print("Usuario:", remitente)
+    print("Contraseña:", contraseña)
+
     receptor = remitente  # Puedes cambiarlo si quieres recibir en otro correo
 
     # Crear el mensaje de correo
