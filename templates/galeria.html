@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melani | Galería</title>
-  <link rel="stylesheet" href="./css/main.css">
+  >
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script defer src="./js/main.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 
   <!--iconos-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-d5X9QGnPU+W8iGpiFxmg+wq5aBhT9ZbSJSVkGB7D1iRATUplkBpCpjE+ehhfS8Ccm5ULgLUHqPU7N6R2qkW4xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,12 +27,12 @@
     <label for="toggle-menu" class="desplegable">☰</label>
 
     <nav class="menu">
-      <a href="index.html"><i class="fa-sharp fa-solid fa-house"></i> Inicio</a>
-      <a href="sobremi.html"><i class="fa-sharp fa-solid fa-user"></i> Sobre mí</a>
-      <a href="galeria.html"><i class="fa-sharp fa-solid fa-image"></i> Galeria</a>
-      <a href="proyectos.html"><i class="fa-solid fa-folder"></i> Proyectos</a>
-      <a href="miswebs.html"><i class="fa-solid fa-globe"></i> Mis Webs</a>
-      <a href="contactame.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+      <a href="{{ url_for('index') }}"><i class="fa-sharp fa-solid fa-house"></i> Inicio</a>
+      <a href="{{ url_for('sobremi') }}"><i class="fa-sharp fa-solid fa-user"></i> Sobre mí</a>
+      <a href="{{ url_for('galeria') }}"><i class="fa-sharp fa-solid fa-image"></i> Galeria</a>
+      <a href="{{ url_for('proyectos') }}"><i class="fa-solid fa-folder"></i> Proyectos</a>
+      <a href="{{ url_for('miswebs') }}"><i class="fa-solid fa-globe"></i> Mis Webs</a>
+      <a href="{{ url_for('contactame') }}"><i class="fa-solid fa-envelope"></i> Contacto</a>
     </nav>
   </header>
 
