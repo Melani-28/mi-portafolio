@@ -368,6 +368,19 @@
   }
 }
 
+/* Para adaptar la galeria*/
+
+@media (max-width: 480px) {
+  .galeria-contenido {
+    column-count: 1;
+    padding: 1rem;
+  }
+
+  .card {
+    margin: 0 auto 1.5rem auto;
+    max-width: 100%;
+  }
+}
 
 
 /* Contacto*/
@@ -398,10 +411,17 @@ form.contenido {
   gap: 1.5rem;
 }
 
+.form.contenido {
+  width: 100%;
+  max-width: 600px;
+}
+
+
 /* CAMPOS */
 form label {
   font-weight: bold;
   color: var(--color-secundario);
+  
 }
 
 form input,
@@ -414,6 +434,7 @@ form textarea {
   color: #333;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 form input:focus,
@@ -469,7 +490,7 @@ form textarea:focus {
 }
 
 
-/* mis webs*/
+/* MIS WEBS*/
 
 .web-hover {
   max-width: 700px;

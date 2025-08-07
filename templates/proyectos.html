@@ -6,13 +6,14 @@
   <title>Melani | Proyectos</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-  <!--iconos-->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-d5X9QGnPU+W8iGpiFxmg+wq5aBhT9ZbSJSVkGB7D1iRATUplkBpCpjE+ehhfS8Ccm5ULgLUHqPU7N6R2qkW4xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!--tipografia-->
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   
 </head>
 <body>
@@ -23,11 +24,12 @@
     <label for="toggle-menu" class="desplegable">☰</label>
 
     <nav class="menu">
-      <a href="{{ url_for('static', filename='pages/index.html') }}"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="{{ url_for('static', filename='pages/sobremi.html') }}"><i class="fa-solid fa-user"></i> Sobre mí</a>
-      <a href="{{ url_for('static', filename='pages/galeria.html') }}"><i class="fa-solid fa-image"></i> Galería</a>
-      <a href="{{ url_for('static', filename='pages/miswebs.html') }}"><i class="fa-solid fa-globe"></i> Mis Webs</a>
-      <a href="{{ url_for('static', filename='pages/contactame.html') }}"><i class="fa-solid fa-envelope"></i> Contacto</a>
+      <a href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="{{ url_for('sobremi') }}"><i class="fa-solid fa-user"></i> Sobre mí</a>
+      <a href="{{ url_for('galeria') }}"><i class="fa-solid fa-image"></i> Galería</a>
+      <a href="{{ url_for('proyectos') }}"><i class="fa-solid fa-folder-open"></i> Proyectos</a>
+      <a href="{{ url_for('miswebs') }}"><i class="fa-solid fa-globe"></i> Mis Webs</a>
+      <a href="{{ url_for('contactame') }}"><i class="fa-solid fa-envelope"></i> Contacto</a>
     </nav>
   </header>
   <main>

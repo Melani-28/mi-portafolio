@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melani | Contacto</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-
-  <!--iconos-->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-d5X9QGnPU+W8iGpiFxmg+wq5aBhT9ZbSJSVkGB7D1iRATUplkBpCpjE+ehhfS8Ccm5ULgLUHqPU7N6R2qkW4xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!--tipografia-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    
     <h1>PORTAFOLIO</h1>
     <button id="toggle-tema" aria-label="Cambiar tema">💡</button>
     <input type="checkbox" id="toggle-menu" hidden>
@@ -40,7 +36,7 @@
 
     <section id="contacto" class="contacto">
       <h2 class="contacto__title">Contáctame</h2>
-      <form id="formulario-contacto">
+      <form id="formulario__contenido" class="form contenido">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
 
@@ -60,7 +56,7 @@
       </form>
 
       <div id="mensaje-confirmacion" class="oculto">
-        ¡Gracias por escribirme! 💌
+        <p>¡Gracias por escribirme! 💌</p>
       </div>
     </section>
   </main>
