@@ -46,6 +46,7 @@
           <button class="filtro-btn" data-filtro="logos">Logos</button>
           <button class="filtro-btn" data-filtro="packaging">Packaging</button>
           <button class="filtro-btn" data-filtro="ilustraciones">Ilustraciones</button>
+          <button class="filtro-btn" data-filtro="videos">Ediciones</button>
         </div>
       </div>
 
@@ -71,7 +72,7 @@
           <img src="{{ url_for('static', filename='img/logo-clinica.PNG') }}" alt="Clinica Dental Salvador">
         </div>
         <div class="proyecto-item" data-categoria="logos">
-          <img src="{{ url_for('static', filename='img/logo Clara.PNG') }}" alt="Clara moda">
+          <img src="{{ url_for('static', filename='img/logo Clara.png') }}" alt="Clara moda">
         </div>
         <div class="proyecto-item" data-categoria="logos">
           <img src="{{ url_for('static', filename='img/logo 3B.png') }}" alt="decoraciones 3B">
@@ -89,8 +90,30 @@
           <img src="{{ url_for('static', filename='img/dancing whit of devil...jpg') }}" alt="Portada de libro">
           <p>Ilustración editorial: Rediseño de portada de libro</p>
         </div>
+        <div class="proyecto-item" data-categoria="ilustraciones">
+          <img src="{{ url_for('static', filename='img/tablero.jpg') }}" alt="tablero de juego de mesa">
+          <p>Diseño de tablero para juego de mesa</p>
+        </div>
+        <div class="proyecto-item" data-categoria="ilustraciones">
+          <img src="{{ url_for('static', filename='img/personaje.jpg') }}" alt="ilustracion de personaje">
+          <p>Diseño de personaje</p>
+        </div>
+        <!--Edicion de videos-->
+        <div class="proyecto-item" data-categoria="videos">
+          <video controls>
+            <source src="{{ url_for('static', filename='videos/baile.mp4') }}" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <p>Edicion de video con animacion de lineas en After Effects</p>
+        </div>
+        <div class="proyecto-item" data-categoria="videos">
+          <video controls>
+            <source src="{{ url_for('static', filename='videos/logo en 3D.mp4') }}" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <p>Aniacion de logo en 3D con After Effects</p>
+        </div>
 
-      
       </div>
     </section>
   </main>
