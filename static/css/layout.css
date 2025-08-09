@@ -81,8 +81,7 @@
   gap: 0.4rem; 
 }
 
-/*Sobre mi*/
-
+/* Sobre mí */
 .yo {
   background-color: var(--color-fondo);
   padding: 4rem 2rem;
@@ -92,9 +91,18 @@
 
 .yo-contenido {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Móvil: uno debajo del otro */
   align-items: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.yo-estudios {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -111,6 +119,15 @@
   margin-bottom: 1rem;
   color: var(--color-oscuro);
 }
+h2 {
+  font-size: var(--tamanio-subtitulo);
+  margin-bottom: 1rem;
+  color: var(--color-oscuro);
+}
+
+iframe {
+  border-radius: 8px;
+}
 
 .yo-texto strong {
   color: var(--color-principal);
@@ -123,23 +140,28 @@
 }
 
 .yo-imagen img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-  
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-.yo-contenido p{
+/* Colores del texto */
+.yo-contenido p {
   color: var(--color-texto-contenido);
 }
 
+.yo-estudios p {
+  color: var(--color-texto-contenido);
+}
+
+/* En pantallas grandes: lado a lado */
 @media (min-width: 768px) {
   .yo-contenido {
-    flex-direction: row;
+    flex-direction: row; /* Lado a lado */
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /* La imagen empieza arriba */
   }
 
   .yo-texto {
@@ -153,6 +175,7 @@
   }
 }
 
+/* Animaciones */
 .animacion {
   opacity: 0;
   transform: translateY(30px);
@@ -164,6 +187,62 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Programas que manejo */
+.skills {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-secundario);
+}
+
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  background-color: var(--color-oscuro);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px var(--color-principal);
+}
+
+.skill-item img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+  margin: 0;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive para habilidades */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /*inicio*/
 
