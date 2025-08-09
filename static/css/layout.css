@@ -91,7 +91,7 @@
 
 .yo-contenido {
   display: flex;
-  flex-direction: column; /* Móvil: uno debajo del otro */
+  flex-direction: column; 
   align-items: center;
   gap: 2rem;
   max-width: 1200px;
@@ -107,6 +107,50 @@
   margin: 0 auto;
 }
 
+.yo-estudios h2 {
+  font-size: var(--tamanio-subtitulo);
+  margin-bottom: 1rem;
+  color: var(--color-oscuro);
+}
+
+.habilidades-idiomas {
+  display: flex;
+  gap: 2rem; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin: 2rem 0;
+  font-size: var(--tamanio-texto);
+}
+
+.bloque {
+  background-color: var(--color-secundario); 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px; 
+}
+
+.bloque h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #22223B;
+}
+
+.bloque ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+.bloque li {
+  margin-bottom: 0.5rem;
+  color: var(--color-fondo);
+}
+
+.bloque strong {
+  color: #22223B;
+  font-weight: 600;
+}
+
 .yo-texto {
   max-width: 650px;
   text-align: justify;
@@ -119,10 +163,11 @@
   margin-bottom: 1rem;
   color: var(--color-oscuro);
 }
-h2 {
+
+.skills h2 {
   font-size: var(--tamanio-subtitulo);
-  margin-bottom: 1rem;
-  color: var(--color-oscuro);
+  margin-bottom: 2rem;
+  color: #1e1e33d0;
 }
 
 iframe {
@@ -175,6 +220,13 @@ iframe {
   }
 }
 
+@media (max-width: 768px) {
+  .habilidades-idiomas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Animaciones */
 .animacion {
   opacity: 0;
@@ -215,13 +267,15 @@ iframe {
 
 .skill-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px var(--color-principal);
+  box-shadow: 0 6px 20px var(--color-fondo);
 }
 
 .skill-item img {
-  width: 70px;
+  width: 80px;
   height: auto;
   margin-bottom: 0.5rem;
+  opacity: 80% ;
+  
 }
 
 .skill-item p {
@@ -229,6 +283,28 @@ iframe {
   color: white;
   font-size: 0.9rem;
 }
+
+.barra {
+  background-color: var(--color-principal);
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progreso {
+  background-color: var(--color-fondo);
+  height: 100%;
+  width: 0;
+  transition: width 1.5s ease-out; /* animación suave */
+}
+
+@keyframes cargar {
+  to {
+    width: var(--porcentaje);
+  }
+}
+
 
 /* Responsive para habilidades */
 @media (max-width: 768px) {
@@ -589,7 +665,7 @@ form textarea:focus {
   max-width: 700px;
   margin: 2rem auto;
   text-align: center;
-  background: #fff;
+  background: var(--color-texto-navegador);
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -685,7 +761,7 @@ form textarea:focus {
 
 .web-hover:hover {
   transform: scale(1.02);
-  background-color: #fefefe;
+  background-color: var(--color-texto-navegador);
   box-shadow: 0 10px 30px var(--color-principal);
 }
 

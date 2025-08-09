@@ -72,6 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Para animacion de barras
+
+document.addEventListener("DOMContentLoaded", () => {
+  const barras = document.querySelectorAll(".progreso");
+
+  const cargarBarra = (entrada) => {
+    if (entrada.isIntersecting) {
+      entrada.target.style.width = entrada.target.style.getPropertyValue("--porcentaje");
+    }
+  };
+
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(cargarBarra);
+  }, { threshold: 0.5 });
+
+  barras.forEach(barra => observador.observe(barra));
+});
+
 
 
 

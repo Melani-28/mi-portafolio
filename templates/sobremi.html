@@ -35,7 +35,7 @@
   <main>
     <section class="yo">
       <div class="yo-contenido">
-        <div class="yo-texto animacion">
+        <div class="yo-texto">
           <h2>Melani Rousse Salvador Campos</h2>
           <p>¡Hola! Soy una diseñadora gráfica e ilustradora. <i class="fa-solid fa-pencil"></i></p>
           <p>Desde que tengo memoria, el arte ha sido mi forma de ver y entender el mundo. Soy una persona creativa, imaginativa y profundamente detallista; cada proyecto que toco lleva un pedacito de mí, porque no sé trabajar sin ponerle alma a lo que hago.</p>
@@ -56,55 +56,78 @@
       <h2>Programas que manejo</h2>
       <div class="skills-grid">
         <div class="skill-item">
-          <img src="{{ url_for('static', filename='img/krita.png') }}" alt="Clip Studio Paint">
-          <p>Clip Studio Paint</p>
+          <img src="{{ url_for('static', filename='img/krita.png') }}" alt="Krita">
+          <p>Krita</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 50%;"></div>
+          </div>
         </div>
         <div class="skill-item">
-          <img src="{{ url_for('static', filename='img/painttool.png') }}" alt="Paint Tool Sai">
-          <p>Paint Tool Sai</p>
+          <img src="{{ url_for('static', filename='img/canva.png') }}" alt="canva">
+          <p>Canva</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 80%;"></div>
+          </div>
         </div>
         <div class="skill-item">
           <img src="{{ url_for('static', filename='img/illustrator.png') }}" alt="Illustrator">
           <p>Illustrator</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 80%;"></div>
+          </div>
         </div>
         <div class="skill-item">
-          <img src="{{ url_for('static', filename='img/Adobe-Photoshop.png') }}" alt="Photoshop">
+          <img src="{{ url_for('static', filename='img/Photoshop.png') }}" alt="Photoshop">
           <p>Photoshop</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 50%;"></div>
+          </div>
         </div>
         <div class="skill-item">
-          <img src="{{ url_for('static', filename='img/aftereffects.png') }}" alt="After Effects">
+          <img src="{{ url_for('static', filename='img/After effects.png') }}" alt="After Effects">
           <p>After Effects</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 30%;"></div>
+          </div>
         </div>
         <div class="skill-item">
-          <img src="{{ url_for('static', filename='img/premiere.png') }}" alt="Premiere Pro">
+          <img src="{{ url_for('static', filename='img/premiere pro.png') }}" alt="Premiere Pro">
           <p>Premiere Pro</p>
+          <div class="barra">
+            <div class="progreso" style="--porcentaje: 30%;"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Estudios -->
+    <!-- Habilidades -->
+     <section class="habilidades-idiomas">
+      <div class="bloque">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Arte Digital</li>
+          <li>Arte Tradicional</li>
+          <li>Diseño Gráfico</li>
+          <li>Diseño Editorial</li>
+        </ul>
+      </div>
+
+      <div class="bloque">
+        <h2>Idiomas </h2>
+          <ul>
+          <li><strong>Español:</strong> Nativo</li>
+          <li><strong>Inglés:</strong> Básico</li>
+        </ul>
+      </div>
+    </section>
+      <!-- Estudios -->
     <section class="yo-estudios">
       <h2>Estudios <i class="fa-solid fa-school"></i></h2>
       <p>Estudiante de VIII ciclo de la carrera de Arte y Diseño Gráfico Empresarial en la Universidad César Vallejo</p>
       <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
 
-    <!-- Habilidades -->
-      <h2>Habilidades <i class="fa-solid fa-language"></i></h2>
-      <ul>
-        <li> Arte Digital</li>
-        <li> Arte Tradicional</li>
-        <li> Diseño Grafico</li>
-        <li> Diseño Editorial</li>
-      </ul>
-
-      <h2>Idiomas <i class="fa-solid fa-language"></i></h2>
-      <ul>
-        <li><strong>Español:</strong> Nativo</li>
-        <li><strong>Inglés:</strong> Básico</li>
-      </ul>
-
       <h2>Locación <i class="fa-solid fa-location-dot"></i></h2>
-      <p>Lima - Perú, Distrito de Independencia, Av. Los Pinos</p>
+      <p>Lima - Perú, Distrito de Independencia</p>
     </section>
 
         

@@ -15,11 +15,11 @@
 /*Modo oscuro*/
 
 .modo-oscuro{
-    --color-principal: #22223B;
+    --color-principal: #181829;
     --color-secundario: #C9ADA7;
-    --color-terciario: #F2E9E4;
+    --color-terciario: #22223B;
     --color-fondo: #4A4E69;
     --color-oscuro: #9A8C98;
-    --color-texto-navegador: #ffff;
+    --color-texto-navegador: #F2E9E4;
     --color-texto-contenido: #ffff;
 } 
