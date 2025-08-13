@@ -45,7 +45,7 @@ def enviar():
 
     remitente = os.getenv("EMAIL_USER")
     contraseña = os.getenv("EMAIL_PASSWORD")
-    receptor = remitente  # Puedes cambiarlo si deseas enviar a otro correo
+    receptor = remitente  
 
     print("EMAIL_USER:", os.getenv("EMAIL_USER"))
     print("EMAIL_PASSWORD:", os.getenv("EMAIL_PASSWORD"))
@@ -76,7 +76,6 @@ def enviar():
 
 # Ejecutar la aplicación
 if __name__ == '__main__':
-    app.run(debug=True)
 
     app.run(host='0.0.0.0', port=5000)
 app = Flask(__name__)
