@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             alert("Error al enviar: " + data.message);
           }
+          console.log(data.status)
         })
         .catch(() => {
           alert("Error de conexión. Verifica tu red o vuelve a intentarlo.");
@@ -29,4 +30,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
